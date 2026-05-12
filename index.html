@@ -1,4 +1,4 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -60,22 +60,145 @@
     }
 
     .top-links {
-      margin-top: 15px;
+        margin-top: 15px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        justify-content: center;
+        align-items: center;
     }
 
     .top-links a {
-      text-decoration: none;
-      color: white;
-      background: #238636;
-      padding: 10px 18px;
-      margin: 5px;
-      border-radius: 8px;
-      display: inline-block;
-      transition: 0.2s ease;
+        text-decoration: none;
+        color: white;
+        background: #238636;
+        padding: 10px 18px;
+        margin: 5px;
+        border-radius: 8px;
+        display: inline-block;
+        transition: 0.2s ease;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .top-links a.roblox-btn {
+        background: rgb(20, 70, 255);
+        padding: 8px 12px;
+        border: 2px solid white;
+        box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+        transition: all 0.2s ease;
+    }
+
+    .top-links a.roblox-btn img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .top-links a.roblox-btn:hover {
+        background: rgb(20, 70, 255);
+        box-shadow: 0 0 8px rgba(20, 70, 255, 0.6), 0 0 12px rgba(20, 70, 255, 0.4);
+        transform: translateY(-2px);
+    }
+
+    .top-links a.roblox-btn:hover img {
+        filter: brightness(1.2);
+    }
+
+    .top-links button {
+        background: #21262d;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        padding: 8px 12px;
+        cursor: pointer;
+        transition: 0.2s ease;
+        font-size: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: auto;
+        height: 36px;
+        min-width: 36px;
+    }
+
+    .top-links button:hover {
+        background: #30363d;
+        transform: scale(1.05);
     }
 
     .top-links a:hover {
-      background: #2ea043;
+        background: #2ea043;
+    }
+
+    .top-links a:hover img {
+        filter: brightness(1.2);
+    }
+
+    .top-links a {
+        text-decoration: none;
+        color: white;
+        background: #238636;
+        padding: 10px 18px;
+        margin: 5px;
+        border-radius: 8px;
+        display: inline-block;
+        transition: 0.2s ease;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .top-links a.roblox-btn {
+        background: rgb(20, 70, 255);
+        padding: 8px 12px;
+        border: 2px solid white;
+        box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+        transition: all 0.2s ease;
+    }
+
+    .top-links a.roblox-btn:hover {
+        background: rgb(20, 70, 255);
+        box-shadow: 0 0 8px rgba(20, 70, 255, 0.6), 0 0 12px rgba(20, 70, 255, 0.4);
+        transform: translateY(-2px);
+    }
+
+    .top-links a.roblox-btn img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .top-links a:hover {
+        background: #2ea043;
+    }
+
+    .top-links a:hover img {
+        filter: brightness(1.2);
+    }
+
+    .top-links a.roblox-btn {
+        background: rgb(20, 70, 255);
+        padding: 8px 12px;
+        border: 2px solid white;
+        box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+        transition: all 0.2s ease;
+    }
+
+    .top-links a.roblox-btn:hover {
+        background: rgb(20, 70, 255);
+        box-shadow: 0 0 8px rgba(20, 70, 255, 0.6), 0 0 12px rgba(20, 70, 255, 0.4);
+        transform: translateY(-2px);
+    }
+
+    .top-links a.roblox-btn:hover img {
+        filter: brightness(1.2);
+    }
+
+    .top-links a.roblox-btn:hover {
+        background: rgba(20, 70, 255, 0.8);
+        box-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+    }
+
+    .top-links a:hover img {
+        filter: brightness(1.2);
     }
 
     .container {
@@ -167,26 +290,33 @@
     }
 
     .unit-card {
-      background: #111318;
-      border: 1px solid #1f1f1f;
-      border-radius: 14px;
-      padding: 12px;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.05);
-      min-height: 230px;
-      position: relative;
-      overflow: hidden;
+        background: linear-gradient(to bottom, #1e2128, #111318);
+        border: 1px solid #2c313a;
+        border-radius: 14px;
+        padding: 12px;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+        min-height: 230px;
+        position: relative;
+        overflow: hidden;
     }
 
     .unit-card:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35), inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+        transform: translateY(-3px);
+        box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35), inset 0 0 0 1px rgba(255, 255, 255, 0.12);
+        background: linear-gradient(to bottom, #262b34, #191b22);
     }
 
     .unit-card.mythic {
-      background: #111318;
-      box-shadow: 0 18px 32px rgba(255, 75, 75, 0.18), 0 8px 16px rgba(0, 0, 0, 0.3);
-      clip-path: polygon(8% 0, 92% 0, 100% 8%, 100% 92%, 92% 100%, 8% 100%, 0 92%, 0 8%);
+        background: linear-gradient(to bottom, #1e2128, #111318);
+        box-shadow: 0 18px 32px rgba(255, 75, 75, 0.18), 0 8px 16px rgba(0, 0, 0, 0.3);
+        clip-path: polygon(8% 0, 92% 0, 100% 8%, 100% 92%, 92% 100%, 8% 100%, 0 92%, 0 8%);
+    }
+
+    .unit-card.mythic:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 18px 32px rgba(255, 75, 75, 0.25), 0 8px 16px rgba(0, 0, 0, 0.35);
+        background: linear-gradient(to bottom, #262b34, #191b22);
     }
 
     .unit-card.mythic::before {
@@ -315,6 +445,151 @@
       color: #f5f5f5;
     }
 
+    /* Mobile Optimizations */
+    @media (max-width: 768px) {
+        body {
+            font-size: 1rem;
+        }
+        
+        .container {
+            width: 95%;
+            max-width: 100%;
+            padding: 12px 0;
+        }
+        
+        header h1 {
+            font-size: 1.6rem;
+        }
+        
+        header p {
+            font-size: 0.8rem;
+        }
+        
+        .top-links {
+            flex-direction: column;
+            align-items: stretch;
+        }
+        
+        .top-links a, .top-links button {
+            width: 100%;
+            text-align: center;
+            margin: 4px 0;
+        }
+        
+        .top-links a.roblox-btn img {
+            width: 80px;
+            height: 80px;
+        }
+        
+        .search-box input {
+            padding: 12px;
+            font-size: 0.9rem;
+        }
+        
+        .section-title {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+        
+        .notice {
+            padding: 12px;
+            margin-bottom: 16px;
+        }
+        
+        .view-toggle {
+            margin-bottom: 12px;
+        }
+        
+        .view-toggle button {
+            padding: 6px 10px;
+            font-size: 0.8rem;
+        }
+        
+        table {
+            font-size: 0.8rem;
+        }
+        
+        th, td {
+            padding: 8px;
+        }
+        
+        .grid-container {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 10px;
+            margin-top: 12px;
+        }
+        
+        .unit-card {
+            min-height: 180px;
+            padding: 10px;
+        }
+        
+        .unit-card img {
+            max-height: 90px;
+        }
+        
+        .unit-card h3 {
+            font-size: 0.9rem;
+        }
+        
+        .unit-card p {
+            font-size: 0.75rem;
+        }
+        
+        .scale-note {
+            margin: 12px 0;
+            font-size: 0.8rem;
+        }
+        
+        .shiny-toggle {
+            width: 24px;
+            height: 24px;
+        }
+        
+        .shiny-toggle img {
+            width: 12px;
+            height: 12px;
+        }
+        
+        footer {
+            margin-top: 30px;
+            padding: 16px;
+            font-size: 0.8rem;
+        }
+        
+        footer p {
+            margin: 4px 0;
+        }
+    }
+    
+    /* Extra small devices */
+    @media (max-width: 480px) {
+        body {
+            font-size: 0.95rem;
+        }
+        
+        header h1 {
+            font-size: 1.4rem;
+        }
+        
+        .top-links a.roblox-btn img {
+            width: 60px;
+            height: 60px;
+        }
+        
+        .grid-container {
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+        }
+        
+        .unit-card {
+            min-height: 160px;
+        }
+        
+        .unit-card img {
+            max-height: 80px;
+        }
+    }
+
     .search-box {
       margin-bottom: 25px;
     }
@@ -399,8 +674,9 @@
     <p>Community-Made Trading Values • Updated Frequently</p>
 
     <div class="top-links">
-      <a href="#">Discord Server</a>
-      <a href="#">Roblox Game</a>
+      <a href="https://discord.gg/55KyTaJ5Y">Discord Server</a>
+      <a href="https://www.roblox.com/games/14641667067/Titan-Tower-Defense" class="roblox-btn"><img src="noFilter.webp" alt="Roblox Game"></a>
+      <button id="mobileToggleBtn" title="Toggle Mobile Optimization">📱</button>
     </div>
   </header>
 
@@ -418,6 +694,11 @@
 
     <div class="search-box">
       <input type="text" id="searchInput" placeholder="Search for a unit...">
+    </div>
+    
+    <div class="view-toggle">
+      <button id="listViewBtn">List View</button>
+      <button id="gridViewBtn" class="active">Grid View</button>
     </div>
 
     <table id="valueTable">
@@ -460,7 +741,7 @@
       { file: 'Camerawoman 3.0 .png', value: '', demand: '', status: 'Mythic', notes: '', link: '#', isShiny: false },
       { file: 'Chad Camera guy.png', value: '', demand: '', status: 'Mythic', notes: '', link: '#', isShiny: false },
       { file: 'Chainsaw Upgraded Titan Cameraman.png', value: '', demand: '', status: 'Mythic', notes: '', link: '#', isShiny: false },
-      { file: 'Chief Scientist Camera (Command) (.png', value: '', demand: '', status: 'Mythic', notes: '', link: '#', isShiny: false },
+      { file: 'Chief Scientist Camera (Command).png', value: '', demand: '', status: 'Mythic', notes: '', link: '#', isShiny: false },
       { file: 'Dark Projector Guy (Rental).png', value: '', demand: '', status: 'Mythic', notes: '', link: '#', isShiny: false },
       { file: 'Dark Projector Guy.png', value: '', demand: '', status: 'Mythic', notes: '', link: '#', isShiny: false },
       { file: 'Dark Singularity Man.png', value: '', demand: '', status: 'Mythic', notes: '', link: '#', isShiny: false },
@@ -508,23 +789,31 @@
     ];
 
     function normalizeUnitName(filename) {
-      return filename
-        .replace(/\.[^.]+$/, '')
-        .trim()
-        .replace(/\s+/g, ' ')
-        .replace(/camerawoman/gi, 'Camera Woman')
-        .replace(/speakerwoman/gi, 'Speaker Woman')
-        .replace(/speakerman/gi, 'Speaker Guy')
-        .replace(/speaker man/gi, 'Speaker Guy')
-        .replace(/cameraman/gi, 'Camera Guy')
-        .replace(/camera man/gi, 'Camera Guy')
-        .replace(/tv man/gi, 'TV Guy')
-        .replace(/cameraguy/gi, 'Camera Guy')
-        .replace(/speakerguy/gi, 'Speaker Guy')
-        .replace(/tv guy/gi, 'TV Guy')
-        .replace(/\b([A-Za-z]+)man\b/gi, '$1 Guy')
-        .replace(/ +/g, ' ')
-        .trim();
+        return filename
+            .replace(/\.[^.]+$/, '')
+            .trim()
+            .replace(/\s+/g, ' ')
+            // Fix specific problematic patterns first
+            .replace(/\(\)/g, '')  // Remove empty parentheses
+            .replace(/\(\s*\)/g, '')  // Remove parentheses with whitespace
+            .replace(/Chief Scientist Camera \(Command\)/g, 'Chief Scientist Camera (Command)')
+            // Handle woman/women patterns - be specific to avoid false matches
+            .replace(/camerawoman/gi, 'Camera Woman')
+            .replace(/speakerwoman/gi, 'Speaker Woman')
+            // Handle specific man/guy patterns that we know need fixing
+            .replace(/speakerman/gi, 'Speaker Guy')
+            .replace(/speaker man/gi, 'Speaker Guy')
+            .replace(/cameraman/gi, 'Camera Guy')
+            .replace(/camera man/gi, 'Camera Guy')
+            .replace(/tv man/gi, 'TV Guy')
+            .replace(/cameraguy/gi, 'Camera Guy')
+            .replace(/speakerguy/gi, 'Speaker Guy')
+            .replace(/tv guy/gi, 'TV Guy')
+            // Handle general man -> guy conversion for standalone cases
+            .replace(/\bman\b/gi, 'Guy')
+            // Clean up extra spaces
+            .replace(/ +/g, ' ')
+            .trim();
     }
 
     function formatScale(value) {
@@ -574,11 +863,20 @@
     }
 
     function filterUnits(filter) {
+      // Filter table rows
       const rows = tableBody.querySelectorAll('tr');
       rows.forEach(row => {
         const nameCell = row.querySelector('td:nth-child(2)');
         const text = (nameCell?.textContent || '').toLowerCase();
         row.style.display = text.includes(filter) ? '' : 'none';
+      });
+      
+      // Filter grid cards
+      const cards = gridContainer.querySelectorAll('.unit-card');
+      cards.forEach(card => {
+        const title = card.querySelector('h3');
+        const text = (title?.textContent || '').toLowerCase();
+        card.style.display = text.includes(filter) ? '' : 'none';
       });
     }
 
@@ -586,9 +884,98 @@
       filterUnits(searchInput.value.toLowerCase());
     });
 
-    // Show grid view only
+    // View toggle functionality
+    listViewBtn.addEventListener('click', () => {
+      listViewBtn.classList.add('active');
+      gridViewBtn.classList.remove('active');
+      valueTable.style.display = '';
+      gridContainer.style.display = 'none';
+    });
+
+    gridViewBtn.addEventListener('click', () => {
+      gridViewBtn.classList.add('active');
+      listViewBtn.classList.remove('active');
+      valueTable.style.display = 'none';
+      gridContainer.style.display = 'grid';
+    });
+
+    // Show grid view by default
     valueTable.style.display = 'none';
     gridContainer.style.display = 'grid';
+
+    // Mobile optimization toggle
+    const mobileToggleBtn = document.getElementById('mobileToggleBtn');
+    let isMobileOptimized = false;
+
+    mobileToggleBtn.addEventListener('click', () => {
+        isMobileOptimized = !isMobileOptimized;
+        mobileToggleBtn.textContent = isMobileOptimized ? '💻' : '📱';
+        mobileToggleBtn.title = isMobileOptimized ? 'Disable Mobile Optimization' : 'Toggle Mobile Optimization';
+        
+        if (isMobileOptimized) {
+            // Apply mobile optimizations
+            document.body.style.fontSize = '1.1rem';
+            document.querySelector('.container').style.width = '95%';
+            document.querySelector('.container').style.maxWidth = '100%';
+            document.querySelector('.container').style.padding = '12px 0';
+            
+            // Adjust grid layout for mobile
+            document.querySelector('.grid-container').style.gridTemplateColumns = 'repeat(2, minmax(0, 1fr))';
+            document.querySelector('.grid-container').style.gap = '10px';
+            
+            // Adjust card sizes
+            document.querySelectorAll('.unit-card').forEach(card => {
+                card.style.minHeight = '180px';
+                card.style.padding = '10px';
+            });
+            
+            // Adjust image sizes in cards
+            document.querySelectorAll('.unit-card img').forEach(img => {
+                img.style.maxHeight = '90px';
+            });
+            
+            // Adjust table layout for mobile
+            document.querySelector('table').style.fontSize = '0.8rem';
+            document.querySelectorAll('th, td').forEach(cell => {
+                cell.style.padding = '8px';
+            });
+            
+            // Adjust header
+            document.querySelector('header h1').style.fontSize = '1.6rem';
+            document.querySelector('header p').style.fontSize = '0.8rem';
+        } else {
+            // Reset to desktop styles
+            document.body.style.fontSize = '0.95rem';
+            document.querySelector('.container').style.width = '90%';
+            document.querySelector('.container').style.maxWidth = '980px';
+            document.querySelector('.container').style.padding = '24px 0';
+            
+            // Reset grid layout
+            document.querySelector('.grid-container').style.gridTemplateColumns = 'repeat(6, minmax(0, 1fr))';
+            document.querySelector('.grid-container').style.gap = '14px';
+            
+            // Reset card sizes
+            document.querySelectorAll('.unit-card').forEach(card => {
+                card.style.minHeight = '230px';
+                card.style.padding = '12px';
+            });
+            
+            // Reset image sizes in cards
+            document.querySelectorAll('.unit-card img').forEach(img => {
+                img.style.maxHeight = '120px';
+            });
+            
+            // Reset table layout
+            document.querySelector('table').style.fontSize = '0.88rem';
+            document.querySelectorAll('th, td').forEach(cell => {
+                cell.style.padding = '10px 12px';
+            });
+            
+            // Reset header
+            document.querySelector('header h1').style.fontSize = '2rem';
+            document.querySelector('header p').style.fontSize = '0.88rem';
+        }
+    });
 
     renderUnits();
   </script>
