@@ -81,6 +81,88 @@
         overflow: hidden;
     }
 
+    .top-links a.discord-btn {
+        background: #5865F2;
+        padding: 8px 12px;
+        border: 2px solid white;
+        box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+        transition: all 0.2s ease;
+    }
+
+    .top-links a.discord-btn img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .top-links a.discord-btn:hover {
+        background: #5865F2;
+        box-shadow: 0 0 8px rgba(88, 101, 242, 0.6), 0 0 12px rgba(88, 101, 242, 0.4);
+        transform: translateY(-2px);
+    }
+
+    .top-links a.discord-btn:hover img {
+        filter: brightness(1.2);
+    }
+
+    .top-links a.roblox-btn {
+        background: rgb(20, 70, 255);
+        padding: 8px 12px;
+        border: 2px solid white;
+        box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+        transition: all 0.2s ease;
+    }
+
+    .top-links a.roblox-btn img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .top-links a.roblox-btn:hover {
+        background: rgb(20, 70, 255);
+        box-shadow: 0 0 8px rgba(20, 70, 255, 0.6), 0 0 12px rgba(20, 70, 255, 0.4);
+        transform: translateY(-2px);
+    }
+
+    .top-links a.roblox-btn:hover img {
+        filter: brightness(1.2);
+    }
+
+    .top-links button {
+        background: #21262d;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        padding: 8px 12px;
+        cursor: pointer;
+        transition: 0.2s ease;
+        font-size: 0.85rem;
+    }
+
+    .top-links button:hover {
+        background: #30363d;
+    }
+
+    .top-links a:hover {
+        background: #2ea043;
+    }
+
+    .top-links a:hover img {
+        filter: brightness(1.2);
+    }
+
+    .top-links a {
+        text-decoration: none;
+        color: white;
+        background: #238636;
+        padding: 10px 18px;
+        margin: 5px;
+        border-radius: 8px;
+        display: inline-block;
+        transition: 0.2s ease;
+        position: relative;
+        overflow: hidden;
+    }
+
     .top-links a.roblox-btn {
         background: rgb(20, 70, 255);
         padding: 8px 12px;
@@ -336,7 +418,7 @@
       inset: 0;
       pointer-events: none;
       clip-path: inherit;
-      background: linear-gradient(120deg, transparent 30%, rgba(255,255,255,0.2) 50%, transparent 70%);
+      background: linear-gradient(120deg, transparent 30%, rgba(255,255,200,0.2) 50%, transparent 70%);
       background-size: 200% 100%;
       opacity: 0;
       mix-blend-mode: screen;
@@ -674,7 +756,7 @@
     <p>Community-Made Trading Values • Updated Frequently</p>
 
     <div class="top-links">
-      <a href="https://discord.gg/55KyTaJ5Y">Discord Server</a>
+      <a href="https://discord.gg/55KyTaJ5Y" class="discord-btn"><img src="discord-white-icon.webp" alt="Discord"></a>
       <a href="https://www.roblox.com/games/14641667067/Titan-Tower-Defense" class="roblox-btn"><img src="noFilter.webp" alt="Roblox Game"></a>
       <button id="mobileToggleBtn" title="Toggle Mobile Optimization">📱</button>
     </div>
