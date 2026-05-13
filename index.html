@@ -1059,6 +1059,123 @@
         }
     });
 
+    // Floating mobile optimization button (always visible in corner)
+    const floatingMobileBtn = document.createElement('button');
+    floatingMobileBtn.id = 'floatingMobileBtn';
+    floatingMobileBtn.title = 'Toggle Mobile Optimization';
+    floatingMobileBtn.innerHTML = '📱';
+    floatingMobileBtn.style.position = 'fixed';
+    floatingMobileBtn.style.bottom = '20px';
+    floatingMobileBtn.style.right = '20px';
+    floatingMobileBtn.style.width = '50px';
+    floatingMobileBtn.style.height = '50px';
+    floatingMobileBtn.style.borderRadius = '50%';
+    floatingMobileBtn.style.background = 'rgba(33, 38, 45, 0.9)';
+    floatingMobileBtn.style.color = 'white';
+    floatingMobileBtn.style.border = 'none';
+    floatingMobileBtn.style.fontSize = '1.5rem';
+    floatingMobileBtn.style.cursor = 'pointer';
+    floatingMobileBtn.style.zIndex = '1000';
+    floatingMobileBtn.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.3)';
+    floatingMobileBtn.style.transition = 'all 0.3s ease';
+    floatingMobileBtn.style.display = 'flex';
+    floatingMobileBtn.style.alignItems = 'center';
+    floatingMobileBtn.style.justifyContent = 'center';
+    floatingMobileBtn.style.opacity = '0.8';
+
+    floatingMobileBtn.addEventListener('mouseover', () => {
+        floatingMobileBtn.style.opacity = '1';
+        floatingMobileBtn.style.transform = 'scale(1.1)';
+    });
+
+    floatingMobileBtn.addEventListener('mouseout', () => {
+        floatingMobileBtn.style.opacity = '0.8';
+        floatingMobileBtn.style.transform = 'scale(1)';
+    });
+
+    floatingMobileBtn.addEventListener('click', () => {
+        isMobileOptimized = !isMobileOptimized;
+        floatingMobileBtn.textContent = isMobileOptimized ? '💻' : '📱';
+        floatingMobileBtn.title = isMobileOptimized ? 'Disable Mobile Optimization' : 'Enable Mobile Optimization';
+        
+        // Update the visible mobile toggle button as well for consistency
+        mobileToggleBtn.textContent = isMobileOptimized ? '💻' : '📱';
+        mobileToggleBtn.title = isMobileOptimized ? 'Disable Mobile Optimization' : 'Enable Mobile Optimization';
+        
+        if (isMobileOptimized) {
+            // Apply mobile optimizations
+            document.body.style.fontSize = '1.1rem';
+            document.querySelector('.container').style.width = '95%';
+            document.querySelector('.container').style.maxWidth = '100%';
+            document.querySelector('.container').style.padding = '12px 0';
+            
+            // Adjust grid layout for mobile
+            document.querySelector('.grid-container').style.gridTemplateColumns = 'repeat(2, minmax(0, 1fr))';
+            document.querySelector('.grid-container').style.gap = '10px';
+            
+            // Adjust card sizes
+            document.querySelectorAll('.unit-card').forEach(card => {
+                card.style.minHeight = '180px';
+                card.style.padding = '10px';
+            });
+            
+            // Adjust image sizes in cards
+            document.querySelectorAll('.unit-card img').forEach(img => {
+                img.style.maxHeight = '90px';
+            });
+            
+            // Adjust table layout for mobile
+            document.querySelector('table').style.fontSize = '0.8rem';
+            document.querySelectorAll('th, td').forEach(cell => {
+                cell.style.padding = '8px';
+            });
+            
+            // Adjust header
+            document.querySelector('header h1').style.fontSize = '1.6rem';
+            document.querySelector('header p').style.fontSize = '0.8rem';
+            
+            // Show the mobile toggle bar button as well for consistency
+            mobileToggleBtn.style.display = 'inline-block';
+        } else {
+            // Reset to desktop styles
+            document.body.style.fontSize = '0.95rem';
+            document.querySelector('.container').style.width = '90%';
+            document.querySelector('.container').style.maxWidth = '980px';
+            document.querySelector('.container').style.padding = '24px 0';
+            
+            // Reset grid layout
+            document.querySelector('.grid-container').style.gridTemplateColumns = 'repeat(6, minmax(0, 1fr))';
+            document.querySelector('.grid-container').style.gap = '14px';
+            
+            // Reset card sizes
+            document.querySelectorAll('.unit-card').forEach(card => {
+                card.style.minHeight = '230px';
+                card.style.padding = '12px';
+            });
+            
+            // Reset image sizes in cards
+            document.querySelectorAll('.unit-card img').forEach(img => {
+                img.style.maxHeight = '120px';
+            });
+            
+            // Reset table layout
+            document.querySelector('table').style.fontSize = '0.88rem';
+            document.querySelectorAll('th, td').forEach(cell => {
+                cell.style.padding = '10px 12px';
+            });
+            
+            // Reset header
+            document.querySelector('header h1').style.fontSize = '2rem';
+            document.querySelector('header p').style.fontSize = '0.88rem';
+            
+            // Hide the mobile toggle bar button when floating button is off (optional)
+            // mobileToggleBtn.style.display = 'none';
+        }
+    });
+
+    // Add the floating button to the body
+    document.body.appendChild(floatingMobileBtn);
+
     renderUnits();
   </script>
 
