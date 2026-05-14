@@ -46,6 +46,7 @@
       padding: 25px;
       border-bottom: 2px solid #2d333b;
       text-align: center;
+      position: relative;
     }
 
     header h1 {
@@ -140,6 +141,79 @@
 
     .top-links button:hover {
         background: #30363d;
+    }
+
+    .page-menu {
+      position: absolute;
+      top: 24px;
+      left: 24px;
+      z-index: 10;
+    }
+
+    .page-menu button {
+      background: #21262d;
+      color: white;
+      border: 1px solid #2d333b;
+      padding: 10px 12px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 0.95rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .page-menu button:hover {
+      background: #30363d;
+    }
+
+    .hamburger {
+      display: inline-flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 16px;
+      height: 12px;
+    }
+
+    .hamburger span {
+      display: block;
+      height: 2px;
+      width: 100%;
+      background: white;
+      border-radius: 1px;
+    }
+
+    .dropdown-menu {
+      position: absolute;
+      top: calc(100% + 8px);
+      left: 0;
+      background: #161b22;
+      border: 1px solid #2d333b;
+      border-radius: 10px;
+      min-width: 220px;
+      display: none;
+      z-index: 20;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+    }
+
+    .dropdown-menu.show {
+      display: block;
+    }
+
+    .dropdown-menu a {
+      display: block;
+      padding: 12px 14px;
+      color: white;
+      text-decoration: none;
+      border-bottom: 1px solid #2d333b;
+    }
+
+    .dropdown-menu a:last-child {
+      border-bottom: none;
+    }
+
+    .dropdown-menu a:hover {
+      background: #21262d;
     }
 
     .top-links a:hover {
@@ -320,44 +394,120 @@
       font-size: 0.85rem;
     }
 
+    .value-mode-toggle {
+      display: inline-flex;
+      gap: 10px;
+      align-items: center;
+      margin-top: 12px;
+    }
+
+    .value-mode-toggle button {
+      background: #161b22;
+      color: white;
+      border: 1px solid #2d333b;
+      padding: 10px 14px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.2s ease;
+      font-size: 0.85rem;
+    }
+
+    .value-mode-toggle button.active {
+      background: #2ea043;
+      border-color: #2ea043;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 18px;
+    }
+
     .view-toggle button:hover {
       background: #30363d;
     }
 
-    .shiny-toggle {
-      position: absolute;
-      bottom: 8px;
-      right: 8px;
+     .card-action-row {
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       gap: 8px;
+       margin-bottom: 8px;
+       z-index: 11;
+       min-height: 20px;
+     }
+
+     .shiny-toggle {
+       font-family: inherit;
+       background: #161b22;
+       border: none;
+       color: white;
+       width: 20px;
+       height: 20px;
+       display: inline-flex;
+       align-items: center;
+       justify-content: center;
+       cursor: pointer;
+       transition: 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+       position: absolute;
+       top: 8px;
+       left: 8px;
+       z-index: 10;
+     }
+
+    .shiny-toggle:hover {
+      background: #22272f;
+      border-color: #2c313a;
+    }
+
+    .shiny-toggle img {
+      width: 20px;
+      height: 20px;
+      display: block;
+      pointer-events: none;
+      flex-shrink: 0;
+    }
+
+    .bm-variant-buttons {
+      display: flex;
+      gap: 6px;
+      margin-left: auto;
+    }
+
+    .bm-variant-btn {
+      font-family: inherit;
       background: #161b22;
-      border: 1px solid #2d333b;
-      padding: 6px;
-      border-radius: 8px;
-      width: 28px;
-      height: 28px;
+      border: 1px solid #ff4b4b;
+      color: white;
+      width: 32px;
+      height: 32px;
       display: inline-flex;
       align-items: center;
       justify-content: center;
       cursor: pointer;
       transition: 0.2s ease, border-color 0.2s ease, background 0.2s ease;
-      z-index: 10;
+      clip-path: polygon(8% 0, 92% 0, 100% 8%, 100% 92%, 92% 100%, 8% 100%, 0 92%, 0 8%);
+      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+      font-size: 0.75rem;
+      font-weight: bold;
     }
 
-    .shiny-toggle:hover {
-      background: #1d232b;
-    }
-
-    .shiny-toggle img {
-      width: 16px;
-      height: 16px;
-      display: block;
-      pointer-events: none;
-      margin: auto;
-    }
-
-    .shiny-toggle.active {
+    .bm-variant-btn.active {
+      background: #7a5af8;
       border-color: #ff4b4b;
-      background: rgba(255, 75, 75, 0.12);
     }
+
+    .bm-variant-btn:hover {
+      background: #ff4b4b;
+      border-color: #ff4b4b;
+    }
+
+     .shiny-toggle.active {
+       background: rgba(255, 75, 75, 0.12);
+     }
 
     .shiny-mode .unit-card.mythic::after {
       opacity: 0.35;
@@ -623,15 +773,18 @@
             font-size: 0.8rem;
         }
         
-        .shiny-toggle {
-            width: 24px;
-            height: 24px;
-        }
+         .shiny-toggle {
+             width: 20px;
+             height: 20px;
+             position: absolute;
+             top: 8px;
+             left: 8px;
+         }
         
-        .shiny-toggle img {
-            width: 12px;
-            height: 12px;
-        }
+         .shiny-toggle img {
+             width: 10px;
+             height: 10px;
+         }
         
         footer {
             margin-top: 30px;
@@ -752,6 +905,21 @@
 <body>
 
   <header>
+    <div class="page-menu">
+      <button id="pageMenuBtn" type="button">
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        Pages
+      </button>
+      <div class="dropdown-menu" id="dropdownMenu">
+        <a href="#" data-page="unit">Unit & Item value index</a>
+        <a href="#" data-page="blackmarket">Black market value index</a>
+      </div>
+    </div>
+
     <h1>Titan Tower Defense Value List</h1>
     <p>Community-Made Trading Values • Updated Frequently</p>
 
@@ -766,20 +934,21 @@
 
     <div class="notice">
       <strong>NOTICE:</strong><br>
-      Values are based on community trading opinions and may change at any time. 
-      Use this list as a guideline, not an absolute standard.
-    </div>
-    
-    <div class="value-explanation">
+      Values are based on community trading opinions and may change at any time.<br>
+      Use this list as a guideline, not an absolute standard.<br><br>
       <strong>How Values Are Determined:</strong><br>
       Basis for currency is Upgraded Raid Keys (UPK) and Upgraded Titan TV Man (UTTV).<br>
       For reference, UTTV = 90 UPK<br>
       All other units are valued off of this.
     </div>
 
-    <h2 class="section-title">Unit Values</h2>
-
-
+    <div class="section-header">
+      <h2 class="section-title">Unit Values</h2>
+      <div class="value-mode-toggle">
+        <button id="tradeModeBtn" class="active">Trade value list</button>
+        <button id="bmModeBtn">BM value list</button>
+      </div>
+    </div>
 
     <div class="search-box">
       <input type="text" id="searchInput" placeholder="Search for a unit...">
@@ -819,9 +988,13 @@
     const searchInput = document.getElementById('searchInput');
     const listViewBtn = document.getElementById('listViewBtn');
     const gridViewBtn = document.getElementById('gridViewBtn');
+    const tradeModeBtn = document.getElementById('tradeModeBtn');
+    const bmModeBtn = document.getElementById('bmModeBtn');
     const valueTable = document.getElementById('valueTable');
     const gridContainer = document.getElementById('gridContainer');
     const tableBody = valueTable.querySelector('tbody');
+    let currentValueMode = 'trade';
+    let currentBmVariant = 'wc';
 
     const unitData = [
       { file: 'Astro Titan Camera Guy.png', value: '', demand: '', status: 'Mythic', notes: '', link: '#', isShiny: false },
@@ -914,6 +1087,14 @@
     }
 
     function renderUnits() {
+      const valueLabel = currentValueMode === 'bm' ? 'BM Token Trade' : 'Value';
+      const demandLabel = currentValueMode === 'bm' ? 'Coin Trade' : 'Demand';
+
+      const valueHeader = valueTable.querySelector('thead th:nth-child(3)');
+      const demandHeader = valueTable.querySelector('thead th:nth-child(4)');
+      if (valueHeader) valueHeader.textContent = `${valueLabel} (0-10)`;
+      if (demandHeader) demandHeader.textContent = `${demandLabel} (0-10)`;
+
       tableBody.innerHTML = '';
       gridContainer.innerHTML = '';
 
@@ -934,10 +1115,16 @@
         card.className = `unit-card mythic${unit.isShiny ? ' shiny' : ''}`;
         card.innerHTML = `
           <img src="${iconSrc(unit.file)}" alt="${displayName}">
-          <button class="shiny-toggle${unit.isShiny ? ' active' : ''}" title="Toggle Shiny"><img src="shiny effect.png" alt="Shiny"></button>
+          <div class="card-action-row">
+            <button class="shiny-toggle${unit.isShiny ? ' active' : ''}" title="Toggle Shiny"><img src="shiny effect.png" alt="Shiny"></button>
+            <div class="bm-variant-buttons" style="display: ${currentValueMode === 'bm' ? 'flex' : 'none'};">
+              <button class="bm-variant-btn${currentBmVariant === 'wc' ? ' active' : ''}" data-variant="wc">WC</button>
+              <button class="bm-variant-btn${currentBmVariant === 'fc' ? ' active' : ''}" data-variant="fc">FC</button>
+            </div>
+          </div>
           <h3><a class="unit-link" href="${unit.link}">${displayName}</a></h3>
-          <p>Value: <span class="scale-value">${formatScale(unit.value)}</span></p>
-          <p>Demand: <span class="scale-value">${formatScale(unit.demand)}</span></p>
+          <p>${valueLabel}: <span class="scale-value">${formatScale(unit.value)}</span></p>
+          <p>${demandLabel}: <span class="scale-value">${formatScale(unit.demand)}</span></p>
         `;
         card.querySelector('.shiny-toggle').addEventListener('click', (e) => {
           e.preventDefault();
@@ -945,6 +1132,15 @@
           unit.isShiny = !unit.isShiny;
           renderUnits();
         });
+
+        card.querySelectorAll('.bm-variant-btn').forEach(btn => {
+          btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            setBmVariant(btn.dataset.variant);
+          });
+        });
+
         gridContainer.appendChild(card);
       });
 
@@ -972,6 +1168,21 @@
     searchInput.addEventListener('keyup', () => {
       filterUnits(searchInput.value.toLowerCase());
     });
+
+    function setBmVariant(variant) {
+      currentBmVariant = variant;
+      renderUnits();
+    }
+
+    function setValueMode(mode) {
+      currentValueMode = mode;
+      tradeModeBtn.classList.toggle('active', mode === 'trade');
+      bmModeBtn.classList.toggle('active', mode === 'bm');
+      renderUnits();
+    }
+
+    tradeModeBtn.addEventListener('click', () => setValueMode('trade'));
+    bmModeBtn.addEventListener('click', () => setValueMode('bm'));
 
     // View toggle functionality
     listViewBtn.addEventListener('click', () => {
@@ -1182,6 +1393,29 @@
 
     // Add the floating button to the body
     document.body.appendChild(floatingMobileBtn);
+
+    const pageMenuBtn = document.getElementById('pageMenuBtn');
+    const dropdownMenu = document.getElementById('dropdownMenu');
+
+    pageMenuBtn.addEventListener('click', (event) => {
+      event.preventDefault();
+      dropdownMenu.classList.toggle('show');
+    });
+
+    document.addEventListener('click', (event) => {
+      if (!pageMenuBtn.contains(event.target) && !dropdownMenu.contains(event.target)) {
+        dropdownMenu.classList.remove('show');
+      }
+    });
+
+    dropdownMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', (event) => {
+        event.preventDefault();
+        dropdownMenu.classList.remove('show');
+        const page = event.currentTarget.getAttribute('data-page');
+        console.log('Page selected:', page);
+      });
+    });
 
     renderUnits();
   </script>
