@@ -458,10 +458,18 @@
        z-index: 10;
      }
 
-    .shiny-toggle:hover {
-      background: #22272f;
-      border-color: #2c313a;
-    }
+     .shiny-toggle:hover {
+       background: #22272f;
+       border-color: #2c313a;
+     }
+
+     .unit-card.mythic .shiny-toggle.active {
+       background: rgba(255, 75, 75, 0.12);
+     }
+
+     .unit-card.secret .shiny-toggle.active {
+       background: rgba(122, 96, 171, 0.12);
+     }
 
     .shiny-toggle img {
       width: 20px;
@@ -477,37 +485,37 @@
       margin-left: auto;
     }
 
-    .bm-variant-btn {
-      font-family: inherit;
-      background: #161b22;
-      border: 1px solid #ff4b4b;
-      color: white;
-      width: 32px;
-      height: 32px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      transition: 0.2s ease, border-color 0.2s ease, background 0.2s ease;
-      clip-path: polygon(8% 0, 92% 0, 100% 8%, 100% 92%, 92% 100%, 8% 100%, 0 92%, 0 8%);
-      box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
-      font-size: 0.75rem;
-      font-weight: bold;
-    }
-
-    .bm-variant-btn.active {
-      background: #7a5af8;
-      border-color: #ff4b4b;
-    }
-
-    .bm-variant-btn:hover {
-      background: #ff4b4b;
-      border-color: #ff4b4b;
-    }
-
-     .shiny-toggle.active {
-       background: rgba(255, 75, 75, 0.12);
+     .bm-variant-btn {
+       font-family: inherit;
+       background: #161b22;
+       border: 1px solid #ff4b4b;
+       color: white;
+       width: 32px;
+       height: 32px;
+       display: inline-flex;
+       align-items: center;
+       justify-content: center;
+       cursor: pointer;
+       transition: 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+       clip-path: polygon(8% 0, 92% 0, 100% 8%, 100% 92%, 92% 100%, 8% 100%, 0 92%, 0 8%);
+       box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+       font-size: 0.75rem;
+       font-weight: bold;
      }
+
+     .bm-variant-btn.active {
+       background: #7a5af8;
+       border-color: #ff4b4b;
+     }
+
+     .bm-variant-btn:hover {
+       background: #ff4b4b;
+       border-color: #ff4b4b;
+     }
+
+      .shiny-toggle.active {
+        background: rgba(255, 75, 75, 0.12);
+      }
 
     .shiny-mode .unit-card.mythic::after {
       opacity: 0.35;
@@ -539,57 +547,109 @@
         background: linear-gradient(to bottom, #262b34, #191b22);
     }
 
-    .unit-card.mythic {
-        background: linear-gradient(to bottom, #1e2128, #111318);
-        box-shadow: 0 18px 32px rgba(255, 75, 75, 0.18), 0 8px 16px rgba(0, 0, 0, 0.3);
-        clip-path: polygon(8% 0, 92% 0, 100% 8%, 100% 92%, 92% 100%, 8% 100%, 0 92%, 0 8%);
-    }
+     .unit-card.mythic {
+         background: linear-gradient(to bottom, #1e2128, #111318);
+         box-shadow: 0 18px 32px rgba(255, 75, 75, 0.18), 0 8px 16px rgba(0, 0, 0, 0.3);
+         clip-path: polygon(8% 0, 92% 0, 100% 8%, 100% 92%, 92% 100%, 8% 100%, 0 92%, 0 8%);
+     }
 
-    .unit-card.mythic:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 18px 32px rgba(255, 75, 75, 0.25), 0 8px 16px rgba(0, 0, 0, 0.35);
-        background: linear-gradient(to bottom, #262b34, #191b22);
-    }
+     .unit-card.mythic:hover {
+         transform: translateY(-3px);
+         box-shadow: 0 18px 32px rgba(255, 75, 75, 0.25), 0 8px 16px rgba(0, 0, 0, 0.35);
+         background: linear-gradient(to bottom, #262b34, #191b22);
+     }
 
-    .unit-card.mythic::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      pointer-events: none;
-      clip-path: inherit;
-      border: 1px solid #ff4b4b;
-      box-sizing: border-box;
-      z-index: 0;
-    }
+     .unit-card.secret {
+         background: linear-gradient(to bottom, #1e2128, #111318);
+         box-shadow: 0 18px 32px rgba(122, 96, 171, 0.18), 0 8px 16px rgba(0, 0, 0, 0.3);
+         clip-path: polygon(8% 0, 92% 0, 100% 8%, 100% 92%, 92% 100%, 8% 100%, 0 92%, 0 8%);
+     }
 
-    .unit-card.mythic::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      pointer-events: none;
-      clip-path: inherit;
-      background: linear-gradient(120deg, transparent 30%, rgba(255,255,200,0.2) 50%, transparent 70%);
-      background-size: 200% 100%;
-      opacity: 0;
-      mix-blend-mode: screen;
-      z-index: 1;
-      transition: opacity 0.3s ease;
-    }
+     .unit-card.secret:hover {
+         transform: translateY(-3px);
+         box-shadow: 0 18px 32px rgba(122, 96, 171, 0.25), 0 8px 16px rgba(0, 0, 0, 0.35);
+         background: linear-gradient(to bottom, #262b34, #191b22);
+     }
 
-    .unit-card.mythic.shiny::after {
-      opacity: 0.35;
-      animation: outline-shimmer 3.2s linear infinite;
-    }
+     .unit-card.mythic::before {
+       content: '';
+       position: absolute;
+       inset: 0;
+       pointer-events: none;
+       clip-path: inherit;
+       border: 1px solid #ff4b4b;
+       box-sizing: border-box;
+       z-index: 0;
+     }
 
-    .unit-card.mythic > * {
-      position: relative;
-      z-index: 1;
-    }
+      .unit-card.secret::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        clip-path: inherit;
+        border: 1px solid #7A60AB;
+        box-sizing: border-box;
+        z-index: 0;
+      }
 
-    .unit-card.mythic h3,
-    .unit-card.mythic .scale-value {
-      color: #ff4b4b;
-    }
+     .unit-card.mythic::after {
+       content: '';
+       position: absolute;
+       inset: 0;
+       pointer-events: none;
+       clip-path: inherit;
+       background: linear-gradient(120deg, transparent 30%, rgba(255,255,200,0.2) 50%, transparent 70%);
+       background-size: 200% 100%;
+       opacity: 0;
+       mix-blend-mode: screen;
+       z-index: 1;
+       transition: opacity 0.3s ease;
+     }
+
+     .unit-card.secret::after {
+       content: '';
+       position: absolute;
+       inset: 0;
+       pointer-events: none;
+       clip-path: inherit;
+       background: linear-gradient(120deg, transparent 30%, rgba(255,255,200,0.2) 50%, transparent 70%);
+       background-size: 200% 100%;
+       opacity: 0;
+       mix-blend-mode: screen;
+       z-index: 1;
+       transition: opacity 0.3s ease;
+     }
+
+     .unit-card.mythic.shiny::after {
+       opacity: 0.35;
+       animation: outline-shimmer 3.2s linear infinite;
+     }
+
+     .unit-card.secret.shiny::after {
+       opacity: 0.35;
+       animation: outline-shimmer 3.2s linear infinite;
+     }
+
+     .unit-card.mythic > * {
+       position: relative;
+       z-index: 1;
+     }
+
+     .unit-card.secret > * {
+       position: relative;
+       z-index: 1;
+     }
+
+     .unit-card.mythic h3,
+     .unit-card.mythic .scale-value {
+       color: #ff4b4b;
+     }
+
+      .unit-card.secret h3,
+      .unit-card.secret .scale-value {
+        color: #7A60AB;
+      }
 
     .unit-card h3 {
       margin-bottom: 8px;
@@ -615,27 +675,49 @@
       overflow: hidden;
     }
 
-    .unit-card.mythic img::before,
-    .unit-card.mythic img::after {
-      content: '';
-      position: absolute;
-      width: 24px;
-      height: 24px;
-      background: #ff4b4b;
-      pointer-events: none;
-    }
+     .unit-card.mythic img::before,
+     .unit-card.mythic img::after {
+       content: '';
+       position: absolute;
+       width: 24px;
+       height: 24px;
+       background: #ff4b4b;
+       pointer-events: none;
+     }
 
-    .unit-card.mythic img::after {
-      top: 0;
-      right: 0;
-      clip-path: polygon(100% 0, 0 0, 100% 100%);
-    }
+      .unit-card.secret img::before,
+      .unit-card.secret img::after {
+        content: '';
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        background: #7A60AB;
+        pointer-events: none;
+      }
 
-    .unit-card.mythic img::before {
-      bottom: 0;
-      left: 0;
-      clip-path: polygon(0 100%, 100% 100%, 0 0);
-    }
+     .unit-card.mythic img::after {
+       top: 0;
+       right: 0;
+       clip-path: polygon(100% 0, 0 0, 100% 100%);
+     }
+
+     .unit-card.mythic img::before {
+       bottom: 0;
+       left: 0;
+       clip-path: polygon(0 100%, 100% 100%, 0 0);
+     }
+
+     .unit-card.secret img::after {
+       top: 0;
+       right: 0;
+       clip-path: polygon(100% 0, 0 0, 100% 100%);
+     }
+
+     .unit-card.secret img::before {
+       bottom: 0;
+       left: 0;
+       clip-path: polygon(0 100%, 100% 100%, 0 0);
+     }
 
     .unit-card h3 {
       margin-bottom: 10px;
@@ -993,62 +1075,106 @@
     const valueTable = document.getElementById('valueTable');
     const gridContainer = document.getElementById('gridContainer');
     const tableBody = valueTable.querySelector('tbody');
-    let currentValueMode = 'trade';
-    let currentBmVariant = 'wc';
+     let currentValueMode = 'trade';
+     let currentBmVariant = 'wc';
 
-    const unitData = [
-      { file: 'Astro Titan Camera Guy.png', value: '', demand: '', status: 'Mythic', notes: '', link: '#', isShiny: false },
-      { file: 'Bunny Racer .png', value: '', demand: '', status: 'Mythic', notes: '', link: '#', isShiny: false },
-      { file: 'Bunny Racer MK II.png', value: '', demand: '', status: 'Mythic', notes: '', link: '#', isShiny: false },
-      { file: 'Camerawoman 3.0 .png', value: '', demand: '', status: 'Mythic', notes: '', link: '#', isShiny: false },
-      { file: 'Chad Camera guy.png', value: '', demand: '', status: 'Mythic', notes: '', link: '#', isShiny: false },
-      { file: 'Chainsaw Upgraded Titan Cameraman.png', value: '', demand: '', status: 'Mythic', notes: '', link: '#', isShiny: false },
-      { file: 'Chief Scientist Camera (Command).png', value: '', demand: '', status: 'Mythic', notes: '', link: '#', isShiny: false },
-      { file: 'Dark Projector Guy (Rental).png', value: '', demand: '', status: 'Mythic', notes: '', link: '#', isShiny: false },
-      { file: 'Dark Projector Guy.png', value: '', demand: '', status: 'Mythic', notes: '', link: '#', isShiny: false },
-      { file: 'Dark Singularity Man.png', value: '', demand: '', status: 'Mythic', notes: '', link: '#', isShiny: false },
-      { file: 'Dave.png', value: '', demand: '', status: 'Mythic', notes: '', link: '#', isShiny: false },
-      { file: 'Diamond Toilet .png', value: '', demand: '', status: 'Mythic', notes: '', link: '#', isShiny: false },
-      { file: 'Engineer Camera guy.png', value: '', demand: '', status: 'Mythic', notes: '', link: '#', isShiny: false },
-      { file: 'Enhance Samurai TV guy.png', value: '', demand: '', status: 'Mythic', notes: '', link: '#', isShiny: false },
-      { file: 'Enhanced Samurai Cameraman.png', value: '', demand: '', status: 'Mythic', notes: '', link: '#', isShiny: false },
-      { file: 'Frankengineer (Upgraded).png', value: '', demand: '', status: 'Mythic', notes: '', link: '#', isShiny: false },
-      { file: 'Frankengineer.png', value: '', demand: '', status: 'Mythic', notes: '', link: '#', isShiny: false },
-      { file: 'Glitch Toilet Camera Guy.png', value: '', demand: '', status: 'Mythic', notes: '', link: '#', isShiny: false },
-      { file: 'Golden Engineer Camera Guy.png', value: '', demand: '', status: 'Mythic', notes: '', link: '#', isShiny: false },
-      { file: 'Golden Hero Speakerman (Revived).png', value: '', demand: '', status: 'Mythic', notes: '', link: '#', isShiny: false },
-      { file: 'Hero Speaker Guy (Revived).png', value: '', demand: '', status: 'Mythic', notes: '', link: '#', isShiny: false },
-      { file: 'Infected Titan Speaker guy.png', value: '', demand: '', status: 'Mythic', notes: '', link: '#', isShiny: false },
-      { file: 'Katana Speakerwoman.png', value: '', demand: '', status: 'Mythic', notes: '', link: '#', isShiny: false },
-      { file: 'Knife Overcharged Titan Speakerman.png', value: '', demand: '', status: 'Mythic', notes: '', link: '#', isShiny: false },
-      { file: 'Large Red Laser Cameraman.png', value: '', demand: '', status: 'Mythic', notes: '', link: '#', isShiny: false },
-      { file: 'Neko TV Head Woman (Fallen).png', value: '', demand: '', status: 'Mythic', notes: '', link: '#', isShiny: false },
-      { file: 'Neko TV Head Woman.png', value: '', demand: '', status: 'Mythic', notes: '', link: '#', isShiny: false },
-      { file: 'Overcharged Mech Cameraguy.png', value: '', demand: '', status: 'Mythic', notes: '', link: '#', isShiny: false },
-      { file: 'Overcharged Titan Speaker Guy.png', value: '', demand: '', status: 'Mythic', notes: '', link: '#', isShiny: false },
-      { file: 'Pirate Speaker (Cannon).png', value: '', demand: '', status: 'Mythic', notes: '', link: '#', isShiny: false },
-      { file: 'Prototype Camera Toilet.png', value: '', demand: '', status: 'Mythic', notes: '', link: '#', isShiny: false },
-      { file: 'Radiant Singularity Guy.png', value: '', demand: '', status: 'Mythic', notes: '', link: '#', isShiny: false },
-      { file: 'Red Laser Camera Guy.png', value: '', demand: '', status: 'Mythic', notes: '', link: '#', isShiny: false },
-      { file: 'Samurai-Camera-Guy.png', value: '', demand: '', status: 'Mythic', notes: '', link: '#', isShiny: false },
-      { file: 'Samurai-TV-Guy.png', value: '', demand: '', status: 'Mythic', notes: '', link: '#', isShiny: false },
-      { file: 'Saw Upgraded Titan Camera Guy.png', value: '', demand: '', status: 'Mythic', notes: '', link: '#', isShiny: false },
-      { file: 'TV Head Woman (Infernal).png', value: '', demand: '', status: 'Mythic', notes: '', link: '#', isShiny: false },
-      { file: 'Titan Camera Guy.png', value: '', demand: '', status: 'Mythic', notes: '', link: '#', isShiny: false },
-      { file: 'Titan Cinema Guy.png', value: '', demand: '', status: 'Mythic', notes: '', link: '#', isShiny: false },
-      { file: 'Titan Samurai (Head).png', value: '', demand: '', status: 'Mythic', notes: '', link: '#', isShiny: false },
-      { file: 'Titan Samurai (Lower).png', value: '', demand: '', status: 'Mythic', notes: '', link: '#', isShiny: false },
-      { file: 'Titan Samurai Upper.png', value: '', demand: '', status: 'Mythic', notes: '', link: '#', isShiny: false },
-      { file: 'Titan Sandcastle Guy (Fortified).png', value: '', demand: '', status: 'Mythic', notes: '', link: '#', isShiny: false },
-      { file: 'Titan Sandcastle Man.png', value: '', demand: '', status: 'Mythic', notes: '', link: '#', isShiny: false },
-      { file: 'Titan Speaker Man.png', value: '', demand: '', status: 'Mythic', notes: '', link: '#', isShiny: false },
-      { file: 'Titan Tv Man .png', value: '', demand: '', status: 'Mythic', notes: '', link: '#', isShiny: false },
-      { file: 'Toxic Upgraded Titan Camera Guy.png', value: '', demand: '', status: 'Mythic', notes: '', link: '#', isShiny: false },
-      { file: 'Tub Engineer (Atomic).png', value: '', demand: '', status: 'Mythic', notes: '', link: '#', isShiny: false },
-      { file: 'Upgraded Titan Camera Guy.png', value: '', demand: '', status: 'Mythic', notes: '', link: '#', isShiny: false },
-      { file: 'Upgraded Titan Speakerman .png', value: '', demand: '', status: 'Mythic', notes: '', link: '#', isShiny: false },
-      { file: 'Upgraded Titan TV man.png', value: '', demand: '', status: 'Mythic', notes: '', link: '#', isShiny: false },
-    ];
+     // BM mode allowed units - only these will be shown in BM value list
+     const bmAllowedUnits = new Set([
+       'Upgraded Titan Speakerman .png',
+       'Upgraded Titan Camera Guy.png',
+       'Titan Tv Man .png',
+       'Titan Speaker Man.png',
+       'Titan Camera Guy.png',
+       'TV Head Woman (Infernal).png',
+       'Katana Speakerwoman.png',
+       'Red Laser Camera Guy.png',
+       'Infected Titan Speaker guy.png',
+       'Overcharged Mech Cameraguy.png',
+       'Golden Engineer Camera Guy.png',
+       'Engineer Camera guy.png',
+       'Dark Projector Guy.png',
+       'Chief Scientist Camera (Command).png',
+       'Hero Speaker Guy (Revived).png',
+       'Energy TV Guy.png',
+       'Energised Energy TV Guy.png',
+       'Scythe Energy TV Woman.png',
+       'Clock Woman.png',
+       'Clock Woman (future).png',
+       'Titan Drill Guy.png',
+       'Slotman.png',
+       'Slotman (Highroller).png',
+       'Bomb Woman.png',
+       'Bomb Woman (Nuclear).png'
+     ]);
+
+     const unitData = [
+       { file: 'Astro Titan Camera Guy.png', value: '', demand: '', status: 'Mythic', notes: '', link: '#', isShiny: false },
+       { file: 'Bunny Racer .png', value: '', demand: '', status: 'Mythic', notes: '', link: '#', isShiny: false },
+       { file: 'Bunny Racer MK II.png', value: '', demand: '', status: 'Mythic', notes: '', link: '#', isShiny: false },
+       { file: 'Camerawoman 3.0 .png', value: '', demand: '', status: 'Mythic', notes: '', link: '#', isShiny: false },
+       { file: 'Chad Camera guy.png', value: '', demand: '', status: 'Mythic', notes: '', link: '#', isShiny: false },
+       { file: 'Chainsaw Upgraded Titan Cameraman.png', value: '', demand: '', status: 'Mythic', notes: '', link: '#', isShiny: false },
+       { file: 'Chief Scientist Camera (Command).png', value: '', demand: '', status: 'Mythic', notes: '', link: '#', isShiny: false },
+       { file: 'Dark Projector Guy (Rental).png', value: '', demand: '', status: 'Mythic', notes: '', link: '#', isShiny: false },
+       { file: 'Dark Projector Guy.png', value: '', demand: '', status: 'Mythic', notes: '', link: '#', isShiny: false },
+       { file: 'Dark Singularity Man.png', value: '', demand: '', status: 'Mythic', notes: '', link: '#', isShiny: false },
+       { file: 'Dave.png', value: '', demand: '', status: 'Mythic', notes: '', link: '#', isShiny: false },
+       { file: 'Diamond Toilet .png', value: '', demand: '', status: 'Mythic', notes: '', link: '#', isShiny: false },
+       { file: 'Engineer Camera guy.png', value: '', demand: '', status: 'Mythic', notes: '', link: '#', isShiny: false },
+       { file: 'Enhance Samurai TV guy.png', value: '', demand: '', status: 'Mythic', notes: '', link: '#', isShiny: false },
+       { file: 'Enhanced Samurai Cameraman.png', value: '', demand: '', status: 'Mythic', notes: '', link: '#', isShiny: false },
+       { file: 'Frankengineer (Upgraded).png', value: '', demand: '', status: 'Mythic', notes: '', link: '#', isShiny: false },
+       { file: 'Frankengineer.png', value: '', demand: '', status: 'Mythic', notes: '', link: '#', isShiny: false },
+       { file: 'Glitch Toilet Camera Guy.png', value: '', demand: '', status: 'Mythic', notes: '', link: '#', isShiny: false },
+       { file: 'Golden Engineer Camera Guy.png', value: '', demand: '', status: 'Mythic', notes: '', link: '#', isShiny: false },
+       { file: 'Golden Hero Speakerman (Revived).png', value: '', demand: '', status: 'Mythic', notes: '', link: '#', isShiny: false },
+       { file: 'Hero Speaker Guy (Revived).png', value: '', demand: '', status: 'Mythic', notes: '', link: '#', isShiny: false },
+       { file: 'Infected Titan Speaker guy.png', value: '', demand: '', status: 'Mythic', notes: '', link: '#', isShiny: false },
+       { file: 'Katana Speakerwoman.png', value: '', demand: '', status: 'Mythic', notes: '', link: '#', isShiny: false },
+       { file: 'Knife Overcharged Titan Speakerman.png', value: '', demand: '', status: 'Mythic', notes: '', link: '#', isShiny: false },
+       { file: 'Large Red Laser Cameraman.png', value: '', demand: '', status: 'Mythic', notes: '', link: '#', isShiny: false },
+       { file: 'Neko TV Head Woman (Fallen).png', value: '', demand: '', status: 'Mythic', notes: '', link: '#', isShiny: false },
+       { file: 'Neko TV Head Woman.png', value: '', demand: '', status: 'Mythic', notes: '', link: '#', isShiny: false },
+       { file: 'Overcharged Mech Cameraguy.png', value: '', demand: '', status: 'Mythic', notes: '', link: '#', isShiny: false },
+       { file: 'Overcharged Titan Speaker Guy.png', value: '', demand: '', status: 'Mythic', notes: '', link: '#', isShiny: false },
+       { file: 'Pirate Speaker (Cannon).png', value: '', demand: '', status: 'Mythic', notes: '', link: '#', isShiny: false },
+       { file: 'Prototype Camera Toilet.png', value: '', demand: '', status: 'Mythic', notes: '', link: '#', isShiny: false },
+       { file: 'Radiant Singularity Guy.png', value: '', demand: '', status: 'Mythic', notes: '', link: '#', isShiny: false },
+       { file: 'Red Laser Camera Guy.png', value: '', demand: '', status: 'Mythic', notes: '', link: '#', isShiny: false },
+       { file: 'Samurai-Camera-Guy.png', value: '', demand: '', status: 'Mythic', notes: '', link: '#', isShiny: false },
+       { file: 'Samurai-TV-Guy.png', value: '', demand: '', status: 'Mythic', notes: '', link: '#', isShiny: false },
+       { file: 'Saw Upgraded Titan Camera Guy.png', value: '', demand: '', status: 'Mythic', notes: '', link: '#', isShiny: false },
+       { file: 'TV Head Woman (Infernal).png', value: '', demand: '', status: 'Mythic', notes: '', link: '#', isShiny: false },
+       { file: 'Titan Camera Guy.png', value: '', demand: '', status: 'Mythic', notes: '', link: '#', isShiny: false },
+       { file: 'Titan Cinema Guy.png', value: '', demand: '', status: 'Mythic', notes: '', link: '#', isShiny: false },
+       { file: 'Titan Samurai (Head).png', value: '', demand: '', status: 'Mythic', notes: '', link: '#', isShiny: false },
+       { file: 'Titan Samurai (Lower).png', value: '', demand: '', status: 'Mythic', notes: '', link: '#', isShiny: false },
+       { file: 'Titan Samurai Upper.png', value: '', demand: '', status: 'Mythic', notes: '', link: '#', isShiny: false },
+       { file: 'Titan Sandcastle Guy (Fortified).png', value: '', demand: '', status: 'Mythic', notes: '', link: '#', isShiny: false },
+       { file: 'Titan Sandcastle Man.png', value: '', demand: '', status: 'Mythic', notes: '', link: '#', isShiny: false },
+       { file: 'Titan Speaker Man.png', value: '', demand: '', status: 'Mythic', notes: '', link: '#', isShiny: false },
+       { file: 'Titan Tv Man .png', value: '', demand: '', status: 'Mythic', notes: '', link: '#', isShiny: false },
+       { file: 'Toxic Upgraded Titan Camera Guy.png', value: '', demand: '', status: 'Mythic', notes: '', link: '#', isShiny: false },
+       { file: 'Tub Engineer (Atomic).png', value: '', demand: '', status: 'Mythic', notes: '', link: '#', isShiny: false },
+       { file: 'Upgraded Titan Camera Guy.png', value: '', demand: '', status: 'Mythic', notes: '', link: '#', isShiny: false },
+       { file: 'Upgraded Titan Speakerman .png', value: '', demand: '', status: 'Mythic', notes: '', link: '#', isShiny: false },
+       { file: 'Upgraded Titan TV man.png', value: '', demand: '', status: 'Mythic', notes: '', link: '#', isShiny: false },
+       { file: 'Bomb Woman (Nuclear).png', value: '', demand: '', status: 'Secret', notes: '', link: '#', isShiny: false },
+       { file: 'Bomb Woman.png', value: '', demand: '', status: 'Secret', notes: '', link: '#', isShiny: false },
+       { file: 'Clock Woman (future).png', value: '', demand: '', status: 'Secret', notes: '', link: '#', isShiny: false },
+       { file: 'Clock Woman.png', value: '', demand: '', status: 'Secret', notes: '', link: '#', isShiny: false },
+       { file: 'Energised Energy TV Guy.png', value: '', demand: '', status: 'Secret', notes: '', link: '#', isShiny: false },
+       { file: 'Energised Zombie Upgraded Titan TV Man.png', value: '', demand: '', status: 'Secret', notes: '', link: '#', isShiny: false },
+       { file: 'Energy TV Guy.png', value: '', demand: '', status: 'Secret', notes: '', link: '#', isShiny: false },
+       { file: 'Scythe Energy TV Woman.png', value: '', demand: '', status: 'Secret', notes: '', link: '#', isShiny: false },
+       { file: 'Slotman (Highroller).png', value: '', demand: '', status: 'Secret', notes: '', link: '#', isShiny: false },
+       { file: 'Slotman.png', value: '', demand: '', status: 'Secret', notes: '', link: '#', isShiny: false },
+       { file: 'Titan Drill Guy.png', value: '', demand: '', status: 'Secret', notes: '', link: '#', isShiny: false },
+       { file: 'Titan Grill (Full Gas).png', value: '', demand: '', status: 'Secret', notes: '', link: '#', isShiny: false },
+       { file: 'Titan Samurai Final.png', value: '', demand: '', status: 'Secret', notes: '', link: '#', isShiny: false },
+       { file: 'Titan-Grill.png', value: '', demand: '', status: 'Secret', notes: '', link: '#', isShiny: false },
+       { file: 'Zombie Upgraded Titan TV Man.png', value: '', demand: '', status: 'Secret', notes: '', link: '#', isShiny: false },
+     ];
 
     function normalizeUnitName(filename) {
         return filename
@@ -1086,19 +1212,23 @@
       return encodeURI(`TTD CHARACTER IMAGES/${fileName}`);
     }
 
-    function renderUnits() {
-      const valueLabel = currentValueMode === 'bm' ? 'BM Token Trade' : 'Value';
-      const demandLabel = currentValueMode === 'bm' ? 'Coin Trade' : 'Demand';
+     function renderUnits() {
+       const valueLabel = currentValueMode === 'bm' ? 'BM Token Trade' : 'Value';
+       const demandLabel = currentValueMode === 'bm' ? 'Coin Trade' : 'Demand';
 
-      const valueHeader = valueTable.querySelector('thead th:nth-child(3)');
-      const demandHeader = valueTable.querySelector('thead th:nth-child(4)');
-      if (valueHeader) valueHeader.textContent = `${valueLabel} (0-10)`;
-      if (demandHeader) demandHeader.textContent = `${demandLabel} (0-10)`;
+       const valueHeader = valueTable.querySelector('thead th:nth-child(3)');
+       const demandHeader = valueTable.querySelector('thead th:nth-child(4)');
+       if (valueHeader) valueHeader.textContent = `${valueLabel} (0-10)`;
+       if (demandHeader) demandHeader.textContent = `${demandLabel} (0-10)`;
 
-      tableBody.innerHTML = '';
-      gridContainer.innerHTML = '';
+       tableBody.innerHTML = '';
+       gridContainer.innerHTML = '';
 
-      unitData.forEach(unit => {
+       const unitsToRender = currentValueMode === 'bm'
+         ? unitData.filter(unit => bmAllowedUnits.has(unit.file))
+         : unitData;
+
+       unitsToRender.forEach(unit => {
         const displayName = normalizeUnitName(unit.file);
         const row = document.createElement('tr');
         row.innerHTML = `
@@ -1111,8 +1241,8 @@
         `;
         tableBody.appendChild(row);
 
-        const card = document.createElement('div');
-        card.className = `unit-card mythic${unit.isShiny ? ' shiny' : ''}`;
+         const card = document.createElement('div');
+         card.className = `unit-card ${unit.status?.toLowerCase()}${unit.isShiny ? ' shiny' : ''}`;
         card.innerHTML = `
           <img src="${iconSrc(unit.file)}" alt="${displayName}">
           <div class="card-action-row">
